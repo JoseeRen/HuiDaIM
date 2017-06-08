@@ -1,0 +1,20 @@
+<!--
+  ~ Create on 2017-6-8 上午11:36
+  ~ FileName: fragment_session.xml
+  ~ Author: Ren Yaowei
+  ~ Blog: http://www.renyaowei.top
+  ~ Email renyaowei@foxmail.com
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

@@ -1,0 +1,31 @@
+/*
+ * Create on 2017-6-8 上午11:36
+ * FileName: build.gradle
+ * Author: Ren Yaowei
+ * Blog: http://www.renyaowei.top
+ * Email renyaowei@foxmail.com
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

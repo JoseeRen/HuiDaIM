@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Create on 2017-6-8 上午11:36
+  ~ FileName: inflate_toolbar_btn.xml
+  ~ Author: Ren Yaowei
+  ~ Blog: http://www.renyaowei.top
+  ~ Email renyaowei@foxmail.com
+  -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableTop="@drawable/selector_meassage"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:text="会话">
+
+</TextView>

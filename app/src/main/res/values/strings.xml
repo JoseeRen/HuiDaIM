@@ -1,0 +1,11 @@
+<!--
+  ~ Create on 2017-6-8 上午11:36
+  ~ FileName: strings.xml
+  ~ Author: Ren Yaowei
+  ~ Blog: http://www.renyaowei.top
+  ~ Email renyaowei@foxmail.com
+  -->
+
+<resources>
+    <string name="app_name">HuiDaIM</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Create on 2017-6-8 上午11:36
+  ~ FileName: selector_selfinfo.xml
+  ~ Author: Ren Yaowei
+  ~ Blog: http://www.renyaowei.top
+  ~ Email renyaowei@foxmail.com
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_selfinfo_pressed" android:state_pressed="true" />
+    <item android:drawable="@drawable/icon_selfinfo_pressed" android:state_selected="true" />
+    <item android:drawable="@drawable/icon_selfinfo_normal" />
+</selector>
