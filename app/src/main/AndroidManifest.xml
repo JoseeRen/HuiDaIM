@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+  ~ Create on 2017-6-11 上午8:29
+  ~ FileName: AndroidManifest.xml
+  ~ Author: Ren Yaowei
+  ~ Blog: http://www.renyaowei.top
+  ~ Email renyaowei@foxmail.com
+  -->
+
+<!--
   ~ Create on 2017-6-8 上午11:36
   ~ FileName: AndroidManifest.xml
   ~ Author: Ren Yaowei
@@ -33,8 +41,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".activitys.LoginActivity" />
+        <activity android:name=".activitys.ChatActivity" />
 
         <service android:name=".service.IMService" />
+
+        <provider
+            android:authorities="com.ryw.huidaim.provider.ContactProvider"
+            android:name=".provider.ContactProvider" />
+        <provider
+            android:authorities="com.ryw.huidaim.provider.SmsProvider"
+            android:name=".provider.SmsProvider" />
     </application>
 
 </manifest>

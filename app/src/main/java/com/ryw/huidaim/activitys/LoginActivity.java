@@ -1,4 +1,12 @@
 /*
+ * Create on 2017-6-11 上午8:29
+ * FileName: LoginActivity.java
+ * Author: Ren Yaowei
+ * Blog: http://www.renyaowei.top
+ * Email renyaowei@foxmail.com
+ */
+
+/*
  * Create on 2017-6-8 上午11:36
  * FileName: LoginActivity.java
  * Author: Ren Yaowei
@@ -50,7 +58,7 @@ public class LoginActivity extends Activity {
     Button mBtnLogin;
     private String username;
     private String password;
-    private static final String HOST = "192.168.1.182";
+    private static final String HOST = "192.168.43.98";
     private static final int PORT = 5222;
 
     @Override
@@ -106,8 +114,11 @@ public class LoginActivity extends Activity {
                     //登录
                     conn.login(username, password);
                     ToastUtil.showToast(LoginActivity.this, "登录成功");
-
-//跳转到主页面
+                    String user = conn.getUser();
+                    String username = user.substring(0, user.indexOf("/"));
+                    IMService.main_user = username;
+                    startService(new Intent(LoginActivity.this, IMService.class));
+                    //跳转到主页面
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();

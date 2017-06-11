@@ -1,4 +1,12 @@
 /*
+ * Create on 2017-6-11 上午8:29
+ * FileName: ContactProvider.java
+ * Author: Ren Yaowei
+ * Blog: http://www.renyaowei.top
+ * Email renyaowei@foxmail.com
+ */
+
+/*
  * Create on 2017-6-8 上午11:36
  * FileName: ContactProvider.java
  * Author: Ren Yaowei
@@ -17,6 +25,7 @@
 package com.ryw.huidaim.provider;
 
 import android.content.ContentProvider;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
@@ -40,6 +49,8 @@ public class ContactProvider extends ContentProvider {
     //uri: "content://主机名/path"
 
     public static String CONTACT_URI = "content://" + AUTHORTIES + "/contact";
+    public static Uri CONTACT_URI_URI = Uri.parse(CONTACT_URI);
+
     private static final int CONTACT = 0;
 
     //初始化匹配器对象
@@ -106,10 +117,15 @@ public class ContactProvider extends ContentProvider {
         if (id != -1) {
             //插入成功
             Log.e("rywwwwwwwww", "insaert success=====================");
+            //TODO 通知内容观察者  更新了
+            //如果第二个参数 为空  则是通知所有
+            getContext().getContentResolver().notifyChange(Uri.parse(CONTACT_URI), null);
+            uri = ContentUris.withAppendedId(uri, id);
+
 
         }
 
-        return null;
+        return uri;
     }
 
     @Override
@@ -127,6 +143,9 @@ public class ContactProvider extends ContentProvider {
         if (delete > 0) {
             //删除成功
             Log.e("rywwwwwwwww", "delete success=====================");
+            //TODO 通知内容观察者  更新了
+            //如果第二个参数 为空  则是通知所有
+            getContext().getContentResolver().notifyChange(Uri.parse(CONTACT_URI), null);
         }
         return delete;
     }
@@ -146,6 +165,9 @@ public class ContactProvider extends ContentProvider {
         }
         if (update > 0) {
             Log.e("rywwwwwwwww", "update  success=================");
+            //TODO 通知内容观察者  更新了
+            //如果第二个参数 为空  则是通知所有
+            getContext().getContentResolver().notifyChange(Uri.parse(CONTACT_URI), null);
         }
         return update;
     }

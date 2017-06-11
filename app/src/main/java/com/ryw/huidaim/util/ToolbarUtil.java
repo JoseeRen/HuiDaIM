@@ -1,4 +1,12 @@
 /*
+ * Create on 2017-6-11 上午8:29
+ * FileName: ToolbarUtil.java
+ * Author: Ren Yaowei
+ * Blog: http://www.renyaowei.top
+ * Email renyaowei@foxmail.com
+ */
+
+/*
  * Create on 2017-6-8 上午11:36
  * FileName: ToolbarUtil.java
  * Author: Ren Yaowei
@@ -29,12 +37,11 @@ import com.ryw.huidaim.R;
 
 public class ToolbarUtil {
     private OnToolbarClickListener mListener;
-    private int position;
 
     public void createToolbar(LinearLayout ll, String[] titles, int[] icons) {
 
         for (int i = 0; i < titles.length; i++) {
-            position = i;
+            final int position = i;
             TextView tv = (TextView) View.inflate(ll.getContext(), R.layout.inflate_toolbar_btn, null);
             tv.setText(titles[i]);
             tv.setCompoundDrawablesWithIntrinsicBounds(0, icons[i], 0, 0);

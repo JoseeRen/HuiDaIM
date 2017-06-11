@@ -1,4 +1,12 @@
 /*
+ * Create on 2017-6-11 上午8:29
+ * FileName: MainActivity.java
+ * Author: Ren Yaowei
+ * Blog: http://www.renyaowei.top
+ * Email renyaowei@foxmail.com
+ */
+
+/*
  * Create on 2017-6-8 上午11:36
  * FileName: MainActivity.java
  * Author: Ren Yaowei
@@ -22,6 +30,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -127,6 +136,7 @@ public class MainActivity extends FragmentActivity {
         @Override
         public void onToolbarClick(int position) {
             //切换viewpager
+            Log.e("......", position + "");
             viewpager.setCurrentItem(position);
         }
     }
